@@ -1,0 +1,53 @@
+{
+  "name": "d3-es6-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for D3 projects with Javascript ES6+ Babel, Gulp, Rollup",
+  "main": "dist/index.html",
+  "homepage": "https://github.com/Packet-Clearing-House/d3-es6-boilerplate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Packet-Clearing-House/d3-es6-boilerplate.git"
+  },
+  "bugs": "https://github.com/Packet-Clearing-House/d3-es6-boilerplate/issues",
+  "author": {
+    "name": "Mohammed Elalj",
+    "email": "mohammed@pch.net",
+    "url": "https://www.pch.net"
+  },
+  "license": "GPL-3.0",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "gulp dist",
+    "start": "gulp"
+  },
+  "keywords": [
+    "d3",
+    "vizualisation",
+    "es6",
+    "jspm",
+    "gulp",
+    "boilerplate",
+    "babel",
+    "rollup"
+  ],
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-replace": "^0.5.4",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sequence": "^0.4.5",
+    "gulp-uglify": "^1.5.2",
+    "rollup": "^0.32.2",
+    "rollup-plugin-babel": "^2.6.0"
+  },
+  "dependencies": {
+    "d3": "^3.5.17"
+  }
+}

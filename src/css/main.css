@@ -1,0 +1,36 @@
+/**/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-align: center;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.dataItem {
+  stroke: black;
+}
+.dataItem.red {
+  fill: red;
+}
+.dataItem.blue {
+  fill: blue;
+}
+
+text {
+  font-size: 0.7em;
+}
+
+/* KUDOS: http://bl.ocks.org/d3noob/a22c42db65eb00d4e369 */
+div.tooltip {	
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    background: black;	
+    border: 0px;
+    pointer-events: none;
+    color: white;
+}
