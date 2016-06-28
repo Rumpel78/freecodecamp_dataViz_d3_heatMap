@@ -1,6 +1,6 @@
 /* eslint no-unused-vars: 0 */
 
-import Visualization from './components/ScatterPlot';
+import Visualization from './GlobalWarmingHeatMap';
 import config from './config';
 
 

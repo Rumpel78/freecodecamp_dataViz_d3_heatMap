@@ -3,6 +3,13 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
   text-align: center;
 }
+svg {
+  border: 1px solid red;
+}
+.axis.label {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
 .axis path,
 .axis line {
   fill: none;
@@ -10,7 +17,6 @@ body {
   shape-rendering: crispEdges;
 }
 .dataItem {
-  stroke: black;
 }
 .dataItem.red {
   fill: red;

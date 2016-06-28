@@ -28,16 +28,20 @@ export default class SvgCanvas {
   }
   drawGraph() {
     this.createGraph(this.dataGroup);
-    this.createXaxis(this.drawingArea.element);
-    this.createXaxisLabel(this.drawingArea.element);
-    this.createYaxis(this.drawingArea.element);
-    this.createYaxisLabel(this.drawingArea.element);
+
+    this.drawXaxis(this.drawingArea.element);
+    this.drawYaxis(this.drawingArea.element);
+
+    this.drawXaxisLabel(this.drawingArea.element);
+    this.drawYaxisLabel(this.drawingArea.element);
   }
   createGraph(parentElement) {
     const items = parentElement.selectAll('.dataItem').data(this.data);
     this.itemsExit(items.exit());
     this.itemsEnter(items.enter());
     this.itemsUpdate(items);
+    this.axisX = this.createXaxis();
+    this.axisY = this.createYaxis();
   }
 
   // OVERRIDE FUNCTIONS
@@ -70,38 +74,42 @@ export default class SvgCanvas {
            .on('mouseout', () => this.onMouseOut());
   }
   itemsUpdate(items) { }
-  createXaxis(parentElement) {
+  createXaxis() {
     // Create x axis
-    this.axisX = d3.svg.axis()
+    return d3.svg.axis()
                     .scale(this.scaleX)
                     .ticks(20)
                     .orient('bottom');
+  }
+  drawXaxis(parentElement) {
     // Draw x axis
     parentElement.append('g')
             .attr('class', 'x axis')
             .attr('transform', `translate(0, ${this.drawingArea.height})`)
             .call(this.axisX);
   }
-  createYaxis(parentElement) {
+  createYaxis() {
      // Create y axis
-    this.axisY = d3.svg.axis()
+    return d3.svg.axis()
                     .scale(this.scaleY)
                     .ticks(20)
                     .orient('left');
+  }
+  drawYaxis(parentElement) {
     // Draw y axis
     parentElement.append('g')
             .attr('class', 'y axis')
             .call(this.axisY);
   }
-  createYaxisLabel(parentElement) {
-    parentElement.append('text')
+  drawYaxisLabel(parentElement) {
+    return parentElement.append('text')
             .attr('class', 'y axis label')
             .text(this.config.labelY)
             .attr('text-anchor', 'end')
             .attr('transform', 'rotate(-90) translate(-5,15)');
   }
-  createXaxisLabel(parentElement) {
-    parentElement.append('text')
+  drawXaxisLabel(parentElement) {
+    return parentElement.append('text')
             .attr('class', 'x axis label')
             .text(this.config.labelX)
             .attr('text-anchor', 'middle')
