@@ -5,7 +5,7 @@ export default class SvgCanvas {
     // Save config
 
     this.width = config.canvasWidth;
-    this.canvasHeight = config.canvasHeight;
+    this.height = config.canvasHeight;
     this.config = config;
 
     // Store refs to elements

@@ -2,9 +2,24 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
   text-align: center;
+  background-color: #00112d;
+  background-image: url('../assets/earth.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
+
 svg {
-  border: 1px solid red;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+a {
+  color: white;
+}
+
+p {
+  font-size: 0.8em;
 }
 .axis.label {
   font-size: 1.2em;
@@ -16,15 +31,6 @@ svg {
   stroke: #000;
   shape-rendering: crispEdges;
 }
-.dataItem {
-}
-.dataItem.red {
-  fill: red;
-}
-.dataItem.blue {
-  fill: blue;
-}
-
 text {
   font-size: 0.7em;
 }
@@ -39,4 +45,7 @@ div.tooltip {
     border: 0px;
     pointer-events: none;
     color: white;
+}
+div.tooltip h3 {
+  margin: 5px;
 }
