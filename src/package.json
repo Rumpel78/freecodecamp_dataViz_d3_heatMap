@@ -33,8 +33,11 @@
   "devDependencies": {
     "babel": "^6.3.26",
     "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-runtime": "^6.26.0",
     "browser-sync": "^2.11.1",
+    "caniuse-db": "^1.0.30000856",
     "del": "^2.2.0",
+    "dotenv": "^6.0.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^4.0.0",
     "gulp": "^3.9.1",
